@@ -1,0 +1,12 @@
+{
+  "name": "perfumebot",
+  "version": "1.0.0",
+  "description": "Protótipo de chatbot para uma loja de perfumes com API e webhook simulados",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

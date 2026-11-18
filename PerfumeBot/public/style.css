@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+:root { --escuro:#29251f; --dourado:#b58b52; --creme:#f7f3ec; --texto:#4e473e; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--creme); color:var(--escuro); font-family:'DM Sans',Arial,sans-serif; }
+.topo { height:76px; padding:0 8%; display:flex; align-items:center; justify-content:space-between; background:#29251f; color:#fff; }
+.marca { font-weight:700; letter-spacing:4px; color:#e3c18d; font-size:20px; }
+.marca span { display:block; font-size:9px; letter-spacing:3px; text-align:center; color:#fff; margin-top:4px; }
+nav { display:flex; gap:25px; }
+nav a { color:#fff; text-decoration:none; font-size:13px; }
+.hero { padding:95px 8% 105px; background:linear-gradient(90deg,rgba(28,24,20,.88),rgba(28,24,20,.48)),url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1800&q=80'); background-color:#514537; color:white; }
+.hero h1 { font:600 clamp(38px,6vw,68px)/1.12 'Playfair Display',serif; margin:15px 0; }
+.hero h1 em,.texto-atendimento h2 em { color:#d6b37d; }
+.hero p:not(.etiqueta) { max-width:500px; line-height:1.7; color:#eee6dc; }
+.etiqueta { color:var(--dourado); font-size:10px; font-weight:700; letter-spacing:3px; }
+.botao-link { display:inline-block; margin-top:18px; padding:14px 22px; background:#c39a61; color:#211d18; text-decoration:none; font-size:12px; font-weight:700; }
+main { max-width:1120px; margin:auto; padding:0 24px; }
+.secao { padding:75px 0; }
+.titulo-secao { display:flex; align-items:end; justify-content:space-between; margin-bottom:25px; }
+h2 { font:600 38px 'Playfair Display',serif; margin:8px 0; }
+.status { font-size:12px; color:#687d56; }
+.grade-produtos { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:18px; }
+.produto { background:#fff; padding:23px; border:1px solid #e9e0d3; }
+.produto-icone { height:145px; display:grid; place-items:center; background:#f0e8dc; font-size:60px; }
+.produto h3 { font:600 21px 'Playfair Display',serif; margin:17px 0 5px; }
+.produto p { color:#82796d; font-size:12px; }
+.produto strong { color:#876338; }
+.atendimento { display:grid; grid-template-columns:1fr 1fr; gap:55px; align-items:center; border-top:1px solid #e5dccf; }
+.texto-atendimento h2 { font-size:52px; }
+.texto-atendimento h2 em { color:#a57d4a; }
+.texto-atendimento > p:not(.etiqueta) { line-height:1.8; color:var(--texto); max-width:410px; }
+.aviso-api { margin-top:13px; padding:12px; border-left:3px solid var(--dourado); background:#eee7dc; color:#5d5448; font-size:12px; line-height:1.6; }
+.chat { background:#fff; border:1px solid #e7ded1; box-shadow:0 12px 35px #4d3a2012; padding:18px; }
+.chat-cabecalho { display:flex; gap:12px; align-items:center; padding:5px 3px 15px; border-bottom:1px solid #eee8df; }
+.avatar { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; background:#302a22; color:#e4c28e; font:22px 'Playfair Display',serif; }
+.chat-cabecalho small { display:block; color:#888; font-size:11px; margin-top:4px; }
+.bolinha { display:inline-block; width:7px; height:7px; background:#5d9c64; border-radius:50%; margin-right:4px; }
+.mensagens { height:260px; overflow:auto; padding:15px 2px; background:#fcfaf7; }
+.mensagem { max-width:88%; padding:11px 13px; margin:8px 0; border-radius:10px; font-size:13px; line-height:1.55; white-space:pre-wrap; }
+.bot { background:#eee7dc; color:#40382f; }
+.usuario { background:#343027; color:white; margin-left:auto; }
+.atalhos { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0; }
+.atalhos button { background:#f4eee5; color:#5c4932; border:1px solid #e7dac7; padding:8px 10px; font-size:11px; cursor:pointer; }
+.entrada { display:flex; gap:8px; }
+.entrada input { flex:1; min-width:0; padding:12px; border:1px solid #ddd4c8; outline-color:#b58b52; }
+.entrada button { width:43px; border:0; background:#302a22; color:white; cursor:pointer; }
+.webhook { width:100%; margin-top:10px; padding:10px; background:#f8f1e5; color:#76572f; border:1px dashed #b58b52; cursor:pointer; font-size:11px; }
+footer { padding:25px; text-align:center; background:#29251f; color:#cfc3b1; font-size:10px; letter-spacing:2px; }
+@media(max-width:700px) { .topo{padding:0 5%;} nav{gap:12px;} .hero{padding:75px 7%;} .atendimento{grid-template-columns:1fr;gap:25px;} .titulo-secao{align-items:start;gap:12px;flex-direction:column;} }

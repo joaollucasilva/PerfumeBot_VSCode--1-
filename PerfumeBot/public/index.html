@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PerfumeBot | Perfum Perfumaria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="marca">ESSENZA <span>PERFUMARIA</span></div>
+    <nav><a href="#catalogo">Catálogo</a><a href="#assistente">Atendimento</a></nav>
+  </header>
+
+  <section class="hero">
+    <p class="etiqueta">SUA ESSÊNCIA, SUA MARCA</p>
+    <h1>Encontre a fragrância<br><em>que combina com você.</em></h1>
+    <p>Conheça nossa seleção de perfumes e receba ajuda do PerfumeBot.</p>
+    <a class="botao-link" href="#catalogo">Explorar perfumes</a>
+  </section>
+
+  <main>
+    <section id="catalogo" class="secao">
+      <div class="titulo-secao">
+        <div><p class="etiqueta">SELEÇÃO ESPECIAL</p><h2>Nosso catálogo</h2></div>
+        <span id="status-api" class="status">Conectando à API...</span>
+      </div>
+      <div id="produtos" class="grade-produtos"></div>
+    </section>
+
+    <section id="assistente" class="secao atendimento">
+      <div class="texto-atendimento">
+        <p class="etiqueta">ATENDIMENTO VIRTUAL</p>
+        <h2>Conheça o<br><em>PerfumeBot.</em></h2>
+        <p>Converse com nosso assistente para consultar preços, descobrir fragrâncias e tirar dúvidas sobre pedidos.</p>
+        <div class="aviso-api"><strong>API simulada:</strong> o assistente consulta os dados de produtos no servidor local.</div>
+        <div class="aviso-api"><strong>Webhook simulado:</strong> use o botão no chat para simular uma atualização de pedido enviada por outro sistema.</div>
+      </div>
+
+      <div class="chat">
+        <div class="chat-cabecalho">
+          <div class="avatar">P</div>
+          <div><strong>PerfumeBot</strong><small><span class="bolinha"></span> Assistente online</small></div>
+        </div>
+        <div id="mensagens" class="mensagens" aria-live="polite">
+          <div class="mensagem bot">Olá! Seja bem-vindo(a) à Essenza. 🌸<br>Como posso ajudar você hoje?</div>
+        </div>
+        <div class="atalhos">
+          <button data-pergunta="Quais perfumes masculinos vocês têm até R$ 300?">Ver preços</button>
+          <button data-pergunta="Quero um perfume doce para sair à noite">Recomendar</button>
+          <button data-pergunta="Como acompanho meu pedido?">Meu pedido</button>
+        </div>
+        <form id="form-chat" class="entrada">
+          <input id="pergunta" placeholder="Digite sua mensagem..." autocomplete="off" required>
+          <button type="submit" aria-label="Enviar mensagem">➤</button>
+        </form>
+        <button id="simular-webhook" class="webhook">⚡ Simular webhook: pedido enviado</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>ESSENZA PERFUMARIA · Protótipo acadêmico PerfumeBot</footer>
+  <script src="app.js"></script>
+</body>
+</html>
